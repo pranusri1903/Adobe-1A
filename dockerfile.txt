@@ -1,0 +1,30 @@
+# Use official OpenJDK base image with JDK 11 for AMD64
+FROM --platform=linux/amd64 openjdk:11-jdk-slim
+
+# Set working directory
+WORKDIR /app
+
+# Install Maven
+RUN apt-get update && \
+    apt-get install -y maven && \
+    rm -rf /var/lib/apt/lists/*
+
+# Copy source code and build configuration
+COPY src/ /app/src/
+COPY pom.xml /app/
+
+# Build the application
+RUN mvn clean package -DskipTests
+
+# Create input and output directories
+RUN mkdir -p /app/input /app/output
+
+# Set executable permissions and create run script
+RUN echo '#!/bin/bash\njava -Xmx4g -jar /app/target/pdf-outline-extractor-1.0.0.jar' > /app/run.sh && \
+    chmod +x /app/run.sh
+
+# Set JVM options for better performance
+ENV JAVA_OPTS="-Xmx4g -Xms1g -XX:+UseG1GC -XX:MaxGCPauseMillis=200"
+
+# Default command
+CMD ["/app/run.sh"]

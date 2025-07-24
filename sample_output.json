@@ -1,0 +1,60 @@
+{
+  "title": "Understanding Artificial Intelligence",
+  "outline": [
+    {
+      "level": "H1",
+      "text": "1. Introduction to AI",
+      "page": 1
+    },
+    {
+      "level": "H2",
+      "text": "1.1 What is Artificial Intelligence?",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "1.1.1 History of AI",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "1.1.2 Types of AI Systems",
+      "page": 4
+    },
+    {
+      "level": "H2",
+      "text": "1.2 Current Applications",
+      "page": 5
+    },
+    {
+      "level": "H1",
+      "text": "2. Machine Learning Fundamentals",
+      "page": 7
+    },
+    {
+      "level": "H2",
+      "text": "2.1 Supervised Learning",
+      "page": 8
+    },
+    {
+      "level": "H2",
+      "text": "2.2 Unsupervised Learning",
+      "page": 12
+    },
+    {
+      "level": "H1",
+      "text": "3. Deep Learning",
+      "page": 15
+    },
+    {
+      "level": "H2",
+      "text": "3.1 Neural Networks",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "3.1.1 Backpropagation",
+      "page": 18
+    }
+  ]
+}
